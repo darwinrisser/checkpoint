@@ -1,0 +1,48 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.background{
+  background-image: url("img/web-bkg-brown.jpg");
+  height: 1000px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header{
+  margin: 2em 2em;
+  font-size: 1.25em;
+  word-spacing: 2em;
+  color: white;
+  position: fixed;
+  width: 90%;
+}
+
+ul{
+  display: inline;
+  float: right;
+}
+
+li{
+  display: inline-block;
+}
+
+li a{
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover{
+  color: grey;
+  border-bottom: 2px solid grey;
+}
+
+h1{
+  text-align: center;
+  color: grey;
+  padding-top: 7em;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
