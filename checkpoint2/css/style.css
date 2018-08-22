@@ -16,10 +16,12 @@ body{
 #nav a{
   text-decoration: none;
   color: black;
+  transition: color 0.3s linear;
+  padding-bottom: 3px;
 }
 
 #nav a:hover{
-  border-bottom: 1px solid black;
+  color: #ed2a64;
 }
 
 .header{
@@ -156,7 +158,7 @@ body{
 
 .section{
   grid-area: section;
-  height: 500px;
+  height: 100%;
   width: 100%;
   background-color: #e3e4e5;
   padding-top: 55px;
@@ -240,30 +242,30 @@ body{
   align-items: center;
   background-color: black;
   color: white;
-  height: 250px;
+  height: 100%;
 }
 
 .footer-nav{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: stretch;
   flex-direction: row;
   font-size: 26px;
   font-weight: bold;
   word-spacing: 2em;
-  width: 33%;
+  width: 50%;
 }
 
 .footer-nav a{
   display: flex;
   color: white;
   text-decoration: none;
-  word-spacing: 2em;
   justify-content: space-between;
+  transition: color 0.3s linear;
 }
 
 .footer-nav a:hover{
-  color: pink;
+  color: #ed2a64;
 }
 
 .footer-copy{
@@ -276,7 +278,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    word-spacing: 2em;
     width: 25%;
 }
 
@@ -286,15 +287,51 @@ body{
     color: black;
     padding: 10px;
     border-radius: 25px;
+    transition: color 0.3s linear;
+    transition: background-color 0.3s linear;
+}
+
+.footer-social i:hover{
+  color: white;
+  background-color: #ed2a64;
 }
 
 @media (max-width: 768px) {
-  .header{
+  #logo-left{
+    width: 0px;
     visibility: hidden;
   }
 
+  #nav{
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  #nav a{
+    color: white;
+  }
+
+  .header{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: bold;
+    height: 80px;
+    width: 100%;
+    grid-area: header;
+    flex-direction: row;
+    background-color: black;
+    position: absolute;
+  }
+
+  #content h1{
+    font-size: 50px;
+  }
+
   .features{
-    padding-top: 35px;
+    padding-top: 75px;
     padding-bottom: 25px;
   }
 
@@ -313,6 +350,12 @@ body{
   .section{
     height: 1200px;
     padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: white;
+  }
+
+  .section h1{
+    font-size: 40px;
   }
 
   .section div{
@@ -320,6 +363,10 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+
+  .features{
+    width: 60%;
   }
 
   .options{
@@ -335,5 +382,23 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer-social{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 50%;
+  }
+
+  .footer-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 26px;
+    font-weight: bold;
+    word-spacing: 2em;
+    width: 50%;
   }
 }
